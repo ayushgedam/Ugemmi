@@ -5,9 +5,9 @@ import {
 } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-2.0-flash";
+import dotenv from "dotenv";
 
-// Paste Your API KEY Below
-const API_KEY = "AIzaSyA6wodGDOEGyqHczGU_D3Vrl2LQf7lQPDw";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 async function runChat(prompt) {
   const genAI = new GoogleGenerativeAI(API_KEY);
